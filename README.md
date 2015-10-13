@@ -1,4 +1,4 @@
-Flat-SlideControl
+CircleCounter
 =====================
 
 Made by [![Appus Studio](https://github.com/appus-studio/Appus-Splash/blob/master/image/logo.png)](http://appus.pro)
