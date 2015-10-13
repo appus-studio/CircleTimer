@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "759c2e15-e223-4308-9b48-3866dff13f1b++5326",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "759c2e15-e223-4308-9b48-3866dff13f1b++5326" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "759c2e15-e223-4308-9b48-3866dff13f1b++5326" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2BA8DAC4-62CE-435F-8B78-0C241E945C02",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "759c2e15-e223-4308-9b48-3866dff13f1b++5326" : "rangeBarIos\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CircleTimer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TimeCircle\/demo\/CircleTimer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/andrey.pervushin@appus.me\/svn\/controls",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "759c2e15-e223-4308-9b48-3866dff13f1b++5326"
+    }
+  ]
+}

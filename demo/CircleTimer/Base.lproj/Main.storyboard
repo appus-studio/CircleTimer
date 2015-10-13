@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-g3-I1a">
+                                <rect key="frame" x="260" y="520" width="80" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.1871478124" green="0.63872767860000002" blue="0.1024788675" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DNN-Wd-bef"/>
+                                    <constraint firstAttribute="width" constant="80" id="ZEq-jo-3xs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start"/>
+                                <state key="selected" title="Stop"/>
+                                <connections>
+                                    <action selector="playStopClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7D-V6-exn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-uI-I3F">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kt5-tK-eos" customClass="CircleTimer">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kt5-tK-eos" secondAttribute="height" multiplier="1:1" id="nKZ-0i-6Ui"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thickness">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kt5-tK-eos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="BgN-e5-We8"/>
+                            <constraint firstItem="7ba-uI-I3F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PDV-oB-ykg"/>
+                            <constraint firstItem="Kt5-tK-eos" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="QkU-Ds-B81"/>
+                            <constraint firstItem="gM6-g3-I1a" firstAttribute="centerX" secondItem="Kt5-tK-eos" secondAttribute="centerX" id="THZ-rK-TmM"/>
+                            <constraint firstItem="Kt5-tK-eos" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V4L-Ov-NhZ"/>
+                            <constraint firstAttribute="trailing" secondItem="7ba-uI-I3F" secondAttribute="trailing" id="WNx-Kf-ivo"/>
+                            <constraint firstItem="Kt5-tK-eos" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aI9-24-28J"/>
+                            <constraint firstItem="gM6-g3-I1a" firstAttribute="top" secondItem="Kt5-tK-eos" secondAttribute="bottom" constant="70" id="chS-TF-tKQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7ba-uI-I3F" secondAttribute="bottom" id="eWn-dk-Vtd"/>
+                            <constraint firstItem="7ba-uI-I3F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p6u-Xa-aa7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7ba-uI-I3F"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="timeCircle" destination="Kt5-tK-eos" id="is7-9Z-Zv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImage.jpg" width="640" height="960"/>
+    </resources>
+</document>
