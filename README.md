@@ -11,7 +11,7 @@ Made by [![Appus Studio](https://github.com/appus-studio/Appus-Splash/blob/maste
 
 # Demo
 ##Example
-![](https://github.com/alexey-kubas-appus/CircleTimer/Resources/demo.gif)
+![](https://raw.githubusercontent.com/alexey-kubas-appus/CircleTimer/master/Resources/demo.gif)
 
 ```Ruby
 pod 'CircleCounter'
