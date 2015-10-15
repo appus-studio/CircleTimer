@@ -6,12 +6,16 @@ Made by [![Appus Studio](https://github.com/appus-studio/Appus-Splash/blob/maste
 'CircleCounter' is an animated countdown timer
 
 * [Demo](#demo)
+* [Example animating](#example-animating)
+* [Example configuring](#example-configuring)
 * [Usage example](#usage-example)
 * [Info](#info)
 
 # Demo
-##Example
+##Example animating
 ![](https://raw.githubusercontent.com/alexey-kubas-appus/CircleTimer/master/Resources/demo.gif)
+##Example configuring
+![](https://raw.githubusercontent.com/alexey-kubas-appus/CircleTimer/master/Resources/using_ib_inspectable.gif)
 
 ```Ruby
 pod 'CircleCounter'
