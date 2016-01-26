@@ -68,7 +68,8 @@
     self.elapsedTime = 0;
     self.offset = OFFSET;
     self.active = YES;
-    
+    self.isBackwards = NO;
+
 }
 
 
@@ -133,8 +134,17 @@
 }
 
 - (void)updateTimerLabel:(NSTimeInterval)elapsedTime {
-    int minutes = (int) (elapsedTime / 60);
-    int seconds = (int) elapsedTime % 60;
+    int minutes;
+    int seconds;
+    
+    if (self.isBackwards) {
+        minutes = (int) ((self.totalTime - elapsedTime) / 60);
+        seconds = (int) (self.totalTime - elapsedTime) % 60;
+    } else {
+        minutes = (int) elapsedTime / 60;
+        seconds = (int) elapsedTime % 60;
+    }
+
     NSString *time = [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
     [self.timerLabel setText:time];
 }
@@ -235,7 +245,12 @@
 
     if (self.active) {
 #if !TARGET_INTERFACE_BUILDER
-        CGFloat angle = (((CGFloat) self.elapsedTime) / (CGFloat) self.totalTime) * M_PI * 2;
+        CGFloat angle;
+        if (self.isBackwards) {
+            angle = 2*M_PI - ((((CGFloat) self.elapsedTime) / (CGFloat) self.totalTime) * M_PI * 2);
+        } else {
+            angle =  (((CGFloat) self.elapsedTime) / (CGFloat) self.totalTime) * M_PI * 2;
+        }
         if (self.isRunning) {
 #else
 CGFloat angle = M_PI;

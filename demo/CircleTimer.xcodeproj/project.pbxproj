@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D75AC3C91BCD27CD00CCA338 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3BD1BCD27CD00CCA338 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		D75AC3CA1BCD27CD00CCA338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75AC3BE1BCD27CD00CCA338 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		D75AC3CB1BCD27CD00CCA338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75AC3C01BCD27CD00CCA338 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		D75AC3CC1BCD27CD00CCA338 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75AC3C21BCD27CD00CCA338 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		D75AC3CD1BCD27CD00CCA338 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3C31BCD27CD00CCA338 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		D75AC3CF1BCD27CD00CCA338 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3C81BCD27CD00CCA338 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D75AC3D31BCD294000CCA338 /* CircleTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3D21BCD294000CCA338 /* CircleTimer.m */; settings = {ASSET_TAGS = (); }; };
+		886BD0D2611FA72659AC8EAC /* libPods-CircleTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1847E0DA717C0EC358DDC37 /* libPods-CircleTimer.a */; };
+		D75AC3C91BCD27CD00CCA338 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3BD1BCD27CD00CCA338 /* AppDelegate.m */; };
+		D75AC3CA1BCD27CD00CCA338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75AC3BE1BCD27CD00CCA338 /* LaunchScreen.storyboard */; };
+		D75AC3CB1BCD27CD00CCA338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75AC3C01BCD27CD00CCA338 /* Main.storyboard */; };
+		D75AC3CC1BCD27CD00CCA338 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75AC3C21BCD27CD00CCA338 /* Info.plist */; };
+		D75AC3CD1BCD27CD00CCA338 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3C31BCD27CD00CCA338 /* main.m */; };
+		D75AC3CF1BCD27CD00CCA338 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AC3C81BCD27CD00CCA338 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09851BC8DD38B25FAC1AF45D /* Pods-CircleTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleTimer/Pods-CircleTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		8F4F003CDCDAD31410502AA4 /* Pods-CircleTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleTimer/Pods-CircleTimer.release.xcconfig"; sourceTree = "<group>"; };
+		B1847E0DA717C0EC358DDC37 /* libPods-CircleTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9109A981BB1735000E46E1B /* CircleTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75AC3BC1BCD27CD00CCA338 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D75AC3BD1BCD27CD00CCA338 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,8 +29,6 @@
 		D75AC3C31BCD27CD00CCA338 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D75AC3C71BCD27CD00CCA338 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D75AC3C81BCD27CD00CCA338 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D75AC3D11BCD294000CCA338 /* CircleTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTimer.h; sourceTree = "<group>"; };
-		D75AC3D21BCD294000CCA338 /* CircleTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886BD0D2611FA72659AC8EAC /* libPods-CircleTimer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635848CE3B75622E4701BA50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09851BC8DD38B25FAC1AF45D /* Pods-CircleTimer.debug.xcconfig */,
+				8F4F003CDCDAD31410502AA4 /* Pods-CircleTimer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A53E1753E604603CF58CC04C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1847E0DA717C0EC358DDC37 /* libPods-CircleTimer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9109A8F1BB1735000E46E1B = {
 			isa = PBXGroup;
 			children = (
 				D75AC3BB1BCD27CD00CCA338 /* CircleTimer */,
 				B9109A991BB1735000E46E1B /* Products */,
+				635848CE3B75622E4701BA50 /* Pods */,
+				A53E1753E604603CF58CC04C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +81,6 @@
 		D75AC3BB1BCD27CD00CCA338 /* CircleTimer */ = {
 			isa = PBXGroup;
 			children = (
-				D75AC3D01BCD294000CCA338 /* CircleTimer */,
 				D75AC3BC1BCD27CD00CCA338 /* AppDelegate.h */,
 				D75AC3BD1BCD27CD00CCA338 /* AppDelegate.m */,
 				D75AC3BE1BCD27CD00CCA338 /* LaunchScreen.storyboard */,
@@ -73,15 +93,6 @@
 			path = CircleTimer;
 			sourceTree = "<group>";
 		};
-		D75AC3D01BCD294000CCA338 /* CircleTimer */ = {
-			isa = PBXGroup;
-			children = (
-				D75AC3D11BCD294000CCA338 /* CircleTimer.h */,
-				D75AC3D21BCD294000CCA338 /* CircleTimer.m */,
-			);
-			path = CircleTimer;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9109AC51BB1735000E46E1B /* Build configuration list for PBXNativeTarget "CircleTimer" */;
 			buildPhases = (
+				F958F9656D7243C7FF7EF120 /* Check Pods Manifest.lock */,
 				B9109A941BB1735000E46E1B /* Sources */,
 				B9109A951BB1735000E46E1B /* Frameworks */,
 				B9109A961BB1735000E46E1B /* Resources */,
+				80C062550FADBA482BB02F88 /* Embed Pods Frameworks */,
+				B53054A972FB6D3E907EE239 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,12 +161,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		80C062550FADBA482BB02F88 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleTimer/Pods-CircleTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B53054A972FB6D3E907EE239 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleTimer/Pods-CircleTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F958F9656D7243C7FF7EF120 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B9109A941BB1735000E46E1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75AC3D31BCD294000CCA338 /* CircleTimer.m in Sources */,
 				D75AC3CF1BCD27CD00CCA338 /* ViewController.m in Sources */,
 				D75AC3CD1BCD27CD00CCA338 /* main.m in Sources */,
 				D75AC3C91BCD27CD00CCA338 /* AppDelegate.m in Sources */,
@@ -265,6 +326,7 @@
 		};
 		B9109AC61BB1735000E46E1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09851BC8DD38B25FAC1AF45D /* Pods-CircleTimer.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(SRCROOT)/CircleTimer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -275,6 +337,7 @@
 		};
 		B9109AC71BB1735000E46E1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F4F003CDCDAD31410502AA4 /* Pods-CircleTimer.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(SRCROOT)/CircleTimer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
