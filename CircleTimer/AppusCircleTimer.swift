@@ -1,6 +1,6 @@
 //
-//  CircleTimer.swift
-//  CircleTimer
+//  AppusCircleTimer.swift
+//  AppusCircleTimer
 //
 //  Created by Sergey Sokoltsov on 11/30/16.
 //  Copyright © 2016 Sergey Sokoltsov. All rights reserved.
@@ -11,13 +11,13 @@ import UIKit
 
 let REFRESH_INTERVAL = 0.015 // ~60 FPS
 
-protocol CircleTimerDelegate : NSObjectProtocol {
+protocol AppusCircleTimerDelegate: NSObjectProtocol {
     /**
      * Alerts the delegate when the timer expires. At this point, counter animation is completed too.
      *
      * @param circleCounter the counter that just expired in time
      */
-    func circleCounterTimeDidExpire(circleTimer: CircleTimer)
+    func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer)
 }
 
 func UIFontAvenirNextBold(size: CGFloat) -> UIFont {
@@ -33,9 +33,9 @@ func UIFontAvenirNextMedium(size: CGFloat) -> UIFont {
 }
 
 @IBDesignable
-class CircleTimer : UIView {
+class AppusCircleTimer: UIView {
     // Defaults
-    let THIKNESS : CGFloat = 8.0
+    let THICKNESS: CGFloat = 8.0
     
     let BGCOLOR = UIColor(red:0.33, green:0.37, blue:0.42, alpha:1)
     let ACOLOR = UIColor(red:0.35, green:0.75, blue:0.74, alpha:1)
@@ -62,7 +62,7 @@ class CircleTimer : UIView {
     /**
      *   The receiver of all counter delegate callbacks.
      */
-    weak var delegate : CircleTimerDelegate?
+    weak var delegate : AppusCircleTimerDelegate?
     
     /** STATES
      *   @didStart - Indicates if the circle counter did start the countdown and animation.
@@ -150,10 +150,10 @@ class CircleTimer : UIView {
         if self.elapsedTime == totalTime {
             self.reset()
         }
-        CircleTimer.validateInputTime(self.totalTime)
+        AppusCircleTimer.validateInputTime(self.totalTime)
         timer = Timer.scheduledTimer(timeInterval:REFRESH_INTERVAL,
                                      target: self,
-                                     selector:#selector(CircleTimer.timerFired),
+                                     selector:#selector(AppusCircleTimer.timerFired),
                                      userInfo: nil,
                                      repeats: true);
         RunLoop.current.add(timer!, forMode: RunLoopMode.commonModes)
@@ -237,7 +237,7 @@ class CircleTimer : UIView {
         inactiveColor = ICOLOR
         pauseColor = PCOLOR
         fontColor = FONT_COLOR
-        thickness = THIKNESS
+        thickness = THICKNESS
         font = FONT
         completedTimeUpToLastStop = 0.0;
         offset = OFFSET
