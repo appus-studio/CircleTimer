@@ -11,7 +11,7 @@ import UIKit
 
 let REFRESH_INTERVAL = 0.015 // ~60 FPS
 
-protocol AppusCircleTimerDelegate: NSObjectProtocol {
+public protocol AppusCircleTimerDelegate: NSObjectProtocol {
     /**
      * Alerts the delegate when the timer expires. At this point, counter animation is completed too.
      *
@@ -33,7 +33,7 @@ func UIFontAvenirNextMedium(size: CGFloat) -> UIFont {
 }
 
 @IBDesignable
-class AppusCircleTimer: UIView {
+public class AppusCircleTimer: UIView {
     // Defaults
     let THICKNESS: CGFloat = 8.0
     
@@ -48,7 +48,7 @@ class AppusCircleTimer: UIView {
     
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         baseInit()
     }
@@ -62,7 +62,7 @@ class AppusCircleTimer: UIView {
     /**
      *   The receiver of all counter delegate callbacks.
      */
-    weak var delegate : AppusCircleTimerDelegate?
+    public weak var delegate : AppusCircleTimerDelegate?
     
     /** STATES
      *   @didStart - Indicates if the circle counter did start the countdown and animation.
@@ -70,11 +70,11 @@ class AppusCircleTimer: UIView {
      *   @didFinish - Indicates if the circle counter finishing counting down and animating.
      *   @active -
      */
-    var didStart : Bool {
+    public var didStart : Bool {
         return timer != nil
     }
     private(set) var isRunning = false
-    var isActive = true {
+    public var isActive = true {
         didSet(newValue) {
             if newValue {
                 self.updateTimerLabel(timeInterval: self.elapsedTime)
@@ -98,32 +98,32 @@ class AppusCircleTimer: UIView {
      *   @circleTimerBreakWidth - space between filled and unfilled part
      */
     
-    @IBInspectable var inactiveColor : UIColor?
-    @IBInspectable var activeColor : UIColor?
-    @IBInspectable var pauseColor : UIColor?
-    @IBInspectable var fontColor : UIColor? {
+    @IBInspectable public var inactiveColor : UIColor?
+    @IBInspectable public var activeColor : UIColor?
+    @IBInspectable public var pauseColor : UIColor?
+    @IBInspectable public var fontColor : UIColor? {
         didSet(newValue) {
             timerLabel?.textColor = newValue;
         }
     }
-    @IBInspectable var thickness : CGFloat = 0.0
+    @IBInspectable public var thickness : CGFloat = 0.0
     var font : UIFont? {
         didSet(newValue) {
             timerLabel?.font = newValue
         }
     }
-    @IBInspectable var isBackwards = false
+    @IBInspectable public var isBackwards = false
     
     /**  @elapsedTime - The amount of time that the timer has completed.
      *                           It takes into account any stops/resumes
      *                           and is updated in real time.
      */
-    var elapsedTime : TimeInterval = 0.0 {
+    public var elapsedTime : TimeInterval = 0.0 {
         didSet(newValue) {
             updateTimerLabel(timeInterval: newValue)
         }
     }
-    var totalTime : TimeInterval = 0.0
+    public var totalTime : TimeInterval = 0.0
     var offset : CGFloat = 0.0
 
     private var timer : Timer?
@@ -139,7 +139,7 @@ class AppusCircleTimer: UIView {
      *
      * @param seconds the length of the countdown timer
      */
-    func start() {
+    public func start() {
         if isRunning {
             return
         }
@@ -190,7 +190,7 @@ class AppusCircleTimer: UIView {
      * Pauses the countdown timer and stops animation. This only has an effect if the
      * counter isRunning.
      */
-    func stop() {
+    public func stop() {
         if !isRunning {
             return
         }
@@ -206,7 +206,7 @@ class AppusCircleTimer: UIView {
      * Continues the countdown timer and resumes animation. This only has an effect if the
      * counter is not running.
      */
-    func resume() {
+    public func resume() {
         isRunning = true
         lastStartTime = Date()
         timer?.fireDate = lastStartTime!
@@ -217,7 +217,7 @@ class AppusCircleTimer: UIView {
      * After reset is called, didStart, isRunning, and didFinish will all be NO.
      * You may start the timer again with start.
      */
-    func reset() {
+    public func reset() {
         timer?.invalidate()
         timer = nil
         elapsedTime = 0;
@@ -259,7 +259,7 @@ class AppusCircleTimer: UIView {
         
     }
     
-    override var backgroundColor: UIColor? {
+    override public var backgroundColor: UIColor? {
         set(newValue) {
             circleBackgroundColor = newValue
         }
@@ -288,7 +288,7 @@ class AppusCircleTimer: UIView {
         }
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let radius = rect.width / 2.0 - thickness / 2.0
         
