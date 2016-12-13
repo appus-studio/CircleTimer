@@ -7,10 +7,10 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "CircleTimer"
+  s.name             = "AppusCircleTimer"
   s.version          = "0.2.0"
   s.summary          = "'CircleCounter' is a simple in use animated countdown timer"
-  s.homepage         = "https://github.com/alexey-kubas-appus/CircleTimer/"
+  s.homepage         = "https://github.com/alexey-kubas-appus/CircleTimer"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "Alexey Kubas" => "alexey.kubas@appus.me" }
   s.source           = { :git => "https://github.com/alexey-kubas-appus/CircleTimer.git", :branch => "master", :tag => s.version.to_s }
