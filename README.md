@@ -1,7 +1,7 @@
 CircleCounter
 =====================
 
-Made by [![Appus Studio](https://github.com/alexey-kubas-appus/CircleTimer/blob/master/appus.png)](https://appus.software)
+Made by [![Appus Studio](https://github.com/alexey-kubas-appus/CircleTimer/blob/master/Resources/appus.png)](https://appus.software)
 
 'CircleCounter' is an animated countdown timer
 
