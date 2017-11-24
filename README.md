@@ -1,7 +1,7 @@
 CircleCounter
 =====================
 
-Made by [![Appus Studio](https://github.com/appus-studio/Appus-Splash/blob/master/image/logo.png)](http://appus.pro)
+Made by [![Appus Studio](https://github.com/alexey-kubas-appus/CircleTimer/blob/master/appus.png)](https://appus.software)
 
 'CircleCounter' is an animated countdown timer
 
@@ -31,12 +31,12 @@ self.timeCircle.elapsedTime = 0;
 Developed By
 ------------
 
-* Alexey Kubas, Kirill Serebriakov, Andrey Pervushin, Appus Studio
+* Alexey Kubas, Kirill Serebriakov, Andrey Pervushin, [Appus Studio](https://appus.software)
 
 License
 --------
 
-Copyright 2015 Appus Studio.
+Copyright 2015 [Appus Studio](https://appus.software).
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
