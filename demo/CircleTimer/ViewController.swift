@@ -42,6 +42,12 @@ class ViewController: UIViewController, AppusCircleTimerDelegate {
         }
     }
     
+    @IBAction func resetClicked(_ sender: Any) {
+        circleTimer?.reset()
+        circleTimer?.elapsedTime = 58
+        startButton?.isSelected = false
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
