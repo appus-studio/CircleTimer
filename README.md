@@ -21,7 +21,7 @@ Made by [![Appus Studio](https://github.com/alexey-kubas-appus/CircleTimer/blob/
 pod 'CircleCounter'
 ```
 
-##Usage example:
+## Usage example:
 
 self.timeCircle.totalTime = 5;
 self.timeCircle.elapsedTime = 0;
