@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,12 +48,28 @@
                                     <action selector="startStopClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lkH-3K-aan"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXJ-eI-ksG">
+                                <rect key="frame" x="147" y="534" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.59607843140000005" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Uwj-qt-pp4"/>
+                                    <constraint firstAttribute="height" constant="40" id="ity-vW-FsT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Reset"/>
+                                <state key="selected" title="Stop"/>
+                                <connections>
+                                    <action selector="resetClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fce-9L-lw3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="X0e-sB-G0k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DwA-C9-uXc"/>
                             <constraint firstItem="X0e-sB-G0k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ORg-cV-LXr"/>
+                            <constraint firstItem="vXJ-eI-ksG" firstAttribute="top" secondItem="ybn-XZ-VcO" secondAttribute="bottom" constant="20" id="YQY-PF-Urf"/>
                             <constraint firstItem="ybn-XZ-VcO" firstAttribute="top" secondItem="X0e-sB-G0k" secondAttribute="bottom" constant="20" id="fW3-in-GbI"/>
+                            <constraint firstItem="vXJ-eI-ksG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTP-j8-agT"/>
                             <constraint firstItem="ybn-XZ-VcO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svG-Yj-F0z"/>
                         </constraints>
                     </view>
