@@ -12,16 +12,16 @@ Made by [![Appus Studio](https://github.com/alexey-kubas-appus/CircleTimer/blob/
 * [Info](#info)
 
 # Demo
-##Example animating
+## Example animating
 ![](https://raw.githubusercontent.com/alexey-kubas-appus/CircleTimer/master/Resources/demo.gif)
-##Example configuring
+## Example configuring
 ![](https://raw.githubusercontent.com/alexey-kubas-appus/CircleTimer/master/Resources/using_ib_inspectable.gif)
 
 ```Ruby
 pod 'CircleCounter'
 ```
 
-##Usage example:
+## Usage example:
 
 self.timeCircle.totalTime = 5;
 self.timeCircle.elapsedTime = 0;
