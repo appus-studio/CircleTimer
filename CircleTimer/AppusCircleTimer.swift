@@ -156,7 +156,7 @@ public class AppusCircleTimer: UIView {
                                      selector:#selector(AppusCircleTimer.timerFired),
                                      userInfo: nil,
                                      repeats: true);
-        RunLoop.current.add(timer!, forMode: RunLoopMode.commonModes)
+        RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
         isRunning = true
         isActive = true
         
@@ -239,7 +239,7 @@ public class AppusCircleTimer: UIView {
         fontColor = FONT_COLOR
         thickness = THICKNESS
         font = FONT
-        completedTimeUpToLastStop = 0.0;
+        completedTimeUpToLastStop = 0.0
         offset = OFFSET
         isActive = true
     }
@@ -253,8 +253,8 @@ public class AppusCircleTimer: UIView {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
         timerLabel = label
         
     }
