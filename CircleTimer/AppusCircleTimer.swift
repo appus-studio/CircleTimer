@@ -75,8 +75,8 @@ public class AppusCircleTimer: UIView {
     }
     private(set) var isRunning = false
     public var isActive = true {
-        didSet(newValue) {
-            if newValue {
+        didSet {
+            if isActive {
                 self.updateTimerLabel(timeInterval: self.elapsedTime)
                 timerLabel?.textColor = self.fontColor
             } else {
@@ -102,14 +102,14 @@ public class AppusCircleTimer: UIView {
     @IBInspectable public var activeColor : UIColor?
     @IBInspectable public var pauseColor : UIColor?
     @IBInspectable public var fontColor : UIColor? {
-        didSet(newValue) {
-            timerLabel?.textColor = newValue;
+        didSet {
+            timerLabel?.textColor = fontColor
         }
     }
     @IBInspectable public var thickness : CGFloat = 0.0
     public var font : UIFont? {
-        didSet(newValue) {
-            timerLabel?.font = newValue
+        didSet {
+            timerLabel?.font = font
         }
     }
     @IBInspectable public var isBackwards = false
@@ -119,8 +119,8 @@ public class AppusCircleTimer: UIView {
      *                           and is updated in real time.
      */
     public var elapsedTime : TimeInterval = 0.0 {
-        didSet(newValue) {
-            updateTimerLabel(timeInterval: newValue)
+        didSet {
+            updateTimerLabel(timeInterval: elapsedTime)
         }
     }
     public var totalTime : TimeInterval = 0.0
