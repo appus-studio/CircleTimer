@@ -75,7 +75,7 @@ public class AppusCircleTimer: UIView {
     }
     private(set) var isRunning = false
     public var isActive = true {
-        didSet(newValue) {
+        didSet (newValue) {
             if newValue {
                 self.updateTimerLabel(timeInterval: self.elapsedTime)
                 timerLabel?.textColor = self.fontColor
@@ -103,11 +103,11 @@ public class AppusCircleTimer: UIView {
     @IBInspectable public var pauseColor : UIColor?
     @IBInspectable public var fontColor : UIColor? {
         didSet(newValue) {
-            timerLabel?.textColor = newValue;
+            timerLabel?.textColor = newValue
         }
     }
     @IBInspectable public var thickness : CGFloat = 0.0
-    var font : UIFont? {
+    public var font : UIFont? {
         didSet(newValue) {
             timerLabel?.font = newValue
         }
@@ -156,7 +156,7 @@ public class AppusCircleTimer: UIView {
                                      selector:#selector(AppusCircleTimer.timerFired),
                                      userInfo: nil,
                                      repeats: true);
-        RunLoop.current.add(timer!, forMode: RunLoopMode.commonModes)
+        RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
         isRunning = true
         isActive = true
         
@@ -239,7 +239,7 @@ public class AppusCircleTimer: UIView {
         fontColor = FONT_COLOR
         thickness = THICKNESS
         font = FONT
-        completedTimeUpToLastStop = 0.0;
+        completedTimeUpToLastStop = 0.0
         offset = OFFSET
         isActive = true
     }
@@ -253,8 +253,8 @@ public class AppusCircleTimer: UIView {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
         timerLabel = label
         
     }
@@ -300,7 +300,7 @@ public class AppusCircleTimer: UIView {
         let midY = rect.midY
         let midPoint = CGPoint.init(x: midX, y: midY)
         
-        let endAngle = CGFloat (2.0 * M_PI)
+        let endAngle = CGFloat (2.0 * Double.pi)
         
         context?.addArc(center:midPoint ,
                         radius: radius,
@@ -313,16 +313,16 @@ public class AppusCircleTimer: UIView {
             #if !TARGET_INTERFACE_BUILDER
                 var angle : CGFloat
                 if isBackwards {
-                    angle = CGFloat((2.0 * M_PI) - ((elapsedTime/totalTime) * M_PI * 2.0))
+                    angle = CGFloat((2.0 * Double.pi) - ((elapsedTime/totalTime) * Double.pi * 2.0))
                 } else {
-                    angle = CGFloat((elapsedTime/totalTime) * M_PI * 2.0)
+                    angle = CGFloat((elapsedTime/totalTime) * Double.pi * 2.0)
                 }
                 if isRunning {
                     context?.beginPath()
                     context?.addArc(center: midPoint,
                                     radius: radius,
-                                    startAngle: -CGFloat(M_PI_2),
-                                    endAngle: angle - CGFloat(M_PI_2),
+                                    startAngle: -CGFloat(Double.pi/2),
+                                    endAngle: angle - CGFloat(Double.pi/2),
                                     clockwise: false)
                     context?.setStrokeColor((pauseColor?.cgColor)!)
                     context?.strokePath()
@@ -330,8 +330,8 @@ public class AppusCircleTimer: UIView {
                     context?.beginPath()
                     context?.addArc(center: midPoint,
                                     radius: radius,
-                                    startAngle: angle - CGFloat(M_PI_2) + offset,
-                                    endAngle: -CGFloat(M_PI_2) - self.offset,
+                                    startAngle: angle - CGFloat(Double.pi/2) + offset,
+                                    endAngle: -CGFloat(Double.pi/2) - self.offset,
                                     clockwise: false)
                     context?.setStrokeColor((inactiveColor?.cgColor)!)
                     context?.strokePath()
@@ -339,19 +339,19 @@ public class AppusCircleTimer: UIView {
                     context?.beginPath()
                     context?.addArc(center: midPoint,
                                     radius: radius,
-                                    startAngle: -CGFloat(M_PI_2),
-                                    endAngle: angle - CGFloat(M_PI_2),
+                                    startAngle: -CGFloat(Double.pi/2),
+                                    endAngle: angle - CGFloat(Double.pi/2),
                                     clockwise: false)
                     context?.setStrokeColor((activeColor?.cgColor)!)
                     context?.strokePath()
                 }
             #else
-                var angle = CGFloat(M_PI)
+                var angle = CGFloat(Double.pi)
                 context?.beginPath()
                 context?.addArc(center: midPoint,
                                 radius: radius,
-                                startAngle: -CGFloat(M_PI_2),
-                                endAngle: angle - CGFloat(M_PI_2),
+                                startAngle: -CGFloat(Double.pi/2),
+                                endAngle: angle - CGFloat(Double.pi/2),
                                 clockwise: false)
                 context?.setStrokeColor((pauseColor?.cgColor)!)
                 context?.strokePath()
